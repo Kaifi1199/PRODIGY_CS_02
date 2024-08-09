@@ -37,18 +37,19 @@ def process_images():
 
 root = tk.Tk()
 root.title("Image Encryption Tool")
+root.geometry("700x300")
 
-tk.Label(root, text="Input Image Path: ").grid(row=0, column=0, sticky="e")
+tk.Label(root, text="\n\n\tInput Image Path: \n\n").grid(row=0, column=0, sticky="e")
 input_entry = tk.Entry(root, width=60)
 input_entry.grid(row=0, column=1)
 tk.Button(root, text="Browse", command=select_input_file).grid(row=0, column=3)
 
-tk.Label(root, text="Output Image Path: ").grid(row=1, column=0, sticky="e")
+tk.Label(root, text="\n\tOutput Image Path: \n").grid(row=1, column=0, sticky="e")
 output_entry = tk.Entry(root, width=60)
 output_entry.grid(row=1, column=1)
 tk.Button(root, text="Browse", command=select_output_file).grid(row=1, column=3)
 
-tk.Label(root, text="Encryption Key (integer):").grid(row=2, column=0, sticky="e")
+tk.Label(root, text="\n\tEncryption Key (integer): \n").grid(row=2, column=0, sticky="e")
 key_entry = tk.Entry(root, width=40)
 key_entry.grid(row=2, column=1)
 tk.Button(root, text="Encrypt/Decrypt", command=process_images).grid(row=3, column=1)
